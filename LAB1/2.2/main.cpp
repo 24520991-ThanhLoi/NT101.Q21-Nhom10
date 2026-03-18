@@ -5,7 +5,6 @@
 
 using namespace std;
 
-// Hàm áp dụng mapping
 string applyMapping(string text, map<char, char> mapping)
 {
     string result = "";
@@ -16,7 +15,6 @@ string applyMapping(string text, map<char, char> mapping)
             result += mapping[c];
         else if (mapping.count(toupper(c)))
         {
-            // giữ đúng chữ hoa/thường
             char mapped = mapping[toupper(c)];
             if (islower(c))
                 result += tolower(mapped);
@@ -30,7 +28,6 @@ string applyMapping(string text, map<char, char> mapping)
     return result;
 }
 
-// Hàm nhập mapping từ người dùng
 void inputMapping(map<char, char> &mapping)
 {
     char cipher, plain;
@@ -49,7 +46,6 @@ void inputMapping(map<char, char> &mapping)
     }
 }
 
-// Hiển thị mapping hiện tại
 void showMapping(map<char, char> mapping)
 {
     cout << "\nMapping hien tai:\n";
@@ -58,8 +54,6 @@ void showMapping(map<char, char> mapping)
         cout << p.first << " -> " << p.second << endl;
     }
 }
-
-// Hàm chính
 int main()
 {
     string ciphertext;
