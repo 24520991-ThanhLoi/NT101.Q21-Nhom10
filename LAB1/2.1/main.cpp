@@ -95,7 +95,7 @@ int main()
                 getline(cin,text);
                 cout<<"Key: ";
                 cin>>key;
-                cout<<"Plaintext: "<<decrypt(text,key);
+                cout<<"Plaintext: "<<decrypt(text,key)<<endl;
                 break;
             case 3:
                 cout<<"Ciphertext: ";
@@ -109,11 +109,5 @@ int main()
                 cout<<"Chon lai chuc nang"<<endl;
         }
     } while (choice !=4 );
-    
-
-
-
-
-
     return 0;
 }
